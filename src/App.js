@@ -5,6 +5,7 @@ import { storage } from "./config/firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import Loading from "./components/loading";
 import UploadCamera from "./components/uploadCamera";
+import isMobile from "./config/isMobile";
 
 function App() {
   const [modalOpenTips, setModalOpenTips] = useState(false);
@@ -157,7 +158,7 @@ function App() {
         <Modal.Header>Choose Image</Modal.Header>
         <Modal.Body>
           <UploadGallery onChange={handleUpload} />
-          <UploadCamera onChange={handleUpload} />
+          {isMobile.any() ? <UploadCamera onChange={handleUpload} /> : null}
         </Modal.Body>
       </Modal>
 
