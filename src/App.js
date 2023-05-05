@@ -203,13 +203,6 @@ function App() {
 
         const pdfURL = doc.output("bloburl");
         window.open(pdfURL, "_blank");
-
-        // var a = document.createElement("a");
-        // a.href = file;
-        // a.download = "measured_image.jpg";
-        // document.body.appendChild(a);
-        // a.click();
-        // a.remove();
       })
       .catch((error) => console.log("error", error));
   };
