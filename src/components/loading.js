@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loading = ({ type }) => {
+const Loading = ({ type, isDark }) => {
   const isUpload = type === "Uploading";
 
   return (
@@ -25,7 +25,7 @@ const Loading = ({ type }) => {
       </svg>
       <p
         className={`mt-3 font-semibold ${
-          isUpload ? "text-black" : "text-green-500"
+          isDark ? "text-white" : isUpload ? "text-black" : "text-green-500"
         }`}
       >
         {type} ...
