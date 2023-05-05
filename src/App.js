@@ -146,7 +146,10 @@ function App() {
             redirect: "follow",
           };
 
-          fetch("http://127.0.0.1:5000/analize_image", requestOptions)
+          fetch(
+            "http://measure.pythonanywhere.com/analize_image",
+            requestOptions
+          )
             .then((response) => response.json())
             .then((result) => setMeasuredImage(result.file))
             .catch((error) => console.log("error", error))
@@ -174,7 +177,7 @@ function App() {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:5000/download_image", requestOptions)
+    fetch("http://measure.pythonanywhere.com/download_image", requestOptions)
       .then((response) => response.blob())
       .then((blob) => {
         var file = window.URL.createObjectURL(blob);
@@ -226,7 +229,7 @@ function App() {
       redirect: "follow",
     };
 
-    fetch("http://127.0.0.1:5000/download_image", requestOptions)
+    fetch("http://measure.pythonanywhere.com/download_image", requestOptions)
       .then((response) => response.blob())
       .then((blob) => {
         var file = window.URL.createObjectURL(blob);
@@ -262,7 +265,7 @@ function App() {
                   height={400}
                   width={300}
                   className="p-3 mt-5 border-solid border-2 border-black"
-                  src={`http://127.0.0.1:5000/static/images/${measuredImage}`}
+                  src={`http://measure.pythonanywhere.com/static/images/${measuredImage}`}
                   alt="measured image"
                 />
 
