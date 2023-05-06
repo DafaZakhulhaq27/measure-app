@@ -409,6 +409,10 @@ function App() {
               <option value={0.04}>22</option>
               <option value={0.035}>23</option>
               <option value={0.03}>24</option>
+              <option value={0.025}>25</option>
+              <option value={0.02}>26</option>
+              <option value={0.015}>27</option>
+              <option value={0.01}>28</option>
             </select>
             <span className="ml-4">px/cm</span>
           </Modal.Body>
