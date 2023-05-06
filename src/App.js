@@ -45,6 +45,15 @@ const convertDistance = (v) => {
       return "23";
     case "0.03":
       return "24";
+    case "0.025":
+      return "25";
+    case "0.02":
+      return "26";
+    case "0.015":
+      return "27";
+    case "0.01":
+      return "28";
+
     default:
       return "0";
   }
